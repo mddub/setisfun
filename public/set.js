@@ -280,13 +280,8 @@ var IO = function (game, container) {
 	}
 	function setupCallbacks() {
 		for(var i = 0; i < game.size(); i++) {
-			$(cardDivs[i]).mouseenter(function () {
-				$(this).addClass('hover');
-				//$('.card').removeClass('hover');
-			}).mouseleave(function () {
-				$(this).removeClass('hover');
 			// holy s@*% a closure!!!
-			}).click(function (j) {
+			$(cardDivs[i]).click(function (j) {
 				return function () {
 					game.toggleCardSelected(j);
 				}
