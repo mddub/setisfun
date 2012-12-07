@@ -304,6 +304,10 @@ var IO = function (game, container) {
 	}
 	return {
 		initialize: function () {
+      // http://www.nczonline.net/blog/2012/07/05/ios-has-a-hover-problem/
+      if(!('ontouchstart' in document.documentElement)) {
+        $('body').addClass('no-touch');
+      }
 			makeBoard(container);
 			for(var i = 0; i < game.size(); i++)
 				this.updateCard([i]);
