@@ -1,4 +1,4 @@
-// Set, an amazing card game designed by Marsha Falco in 1974
+// See https://github.com/mddub/setisfun
 
 (function () {
 
